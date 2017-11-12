@@ -1,0 +1,86 @@
+.container {
+	min-height: 100vh;
+	overflow: hidden;
+}
+h1 * {
+	display: inline-block;
+	vertical-align: middle;
+}
+.flex-space-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.users th, .users td {
+	width: 4%;
+	white-space: nowrap;
+}
+.users th:last-child, .users td:last-child {
+	width: auto;
+}
+.users td.align-middle {
+	vertical-align: middle;
+}
+.users tr td .remove,
+.users tr td .edit,
+.users tr td .save,
+.users tr td .cancel {
+	display: none;
+	cursor: pointer;
+	transition: all 200ms;
+}
+.users tr td .save,
+.users tr td .cancel {
+	display: inline-block;
+}
+.users tr:hover td {
+	background-color: rgba(0, 0, 0, .07);
+}
+.users tr:hover td .remove,
+.users tr:hover td .edit {
+	display: inline-block;
+}
+.users tr td .remove:hover {
+	transform: scale(1.6);
+	color: red;
+}
+.users tr td .edit:hover {
+	transform: scale(1.6);
+	color: blue;	
+}
+.users tr td .save:hover {
+	transform: scale(1.6);
+	color: green;	
+}
+.users tr td .cancel:hover {
+	transform: scale(1.6);
+	color: black;	
+}
+.users tr.edit-row td {
+	position: relative;
+	background-color: rgba(255, 255, 255, .95);
+	z-index: 1000;
+}
+.users tr.edit-row td input,
+.users tr.edit-row td select {
+	width: 160px;
+}
+
+.form {
+	padding: 15px;
+	background-color: #f9f9f9;
+}
+.form.success {
+	background-color: #b7e1bc;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .6);
+	z-index: 999;
+}
